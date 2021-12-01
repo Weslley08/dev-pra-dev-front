@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+    background-color: rgb(0, 183, 255);
+}
+
+.icones {
+    margin-right: 10px;
+}
+
+.link {
+    font-family: Google Sans;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.material-icons {
+    color: white;
+}
+
+.mat-option {
+    text-align: center;
+}
+
+.footer > p {
+    font-family: Google Sans;
+    margin-left: 1.25%;
+    bottom: 0;
+    position: fixed;
+}

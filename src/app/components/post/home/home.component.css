@@ -1,0 +1,26 @@
+.mat-card {
+  font-family: Google Sans;
+  width: 50%;
+  height: 50%;
+  margin: 1rem auto 0 auto;
+  word-wrap: break-word;
+}
+
+.image {
+  border-radius: 50%;
+  width: 45px;
+}
+
+.titulo {
+  white-space: pre-line;
+}
+
+.texto {
+  white-space: pre-line;
+}
+
+.data {
+  margin-right: 3%;
+  color: rgba(255, 255, 255, 0.7);
+  float: right;
+}

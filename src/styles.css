@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(56, 56, 56) rgb(0, 183, 255);
+  }
+  
+  /* Chrome, Edge, e Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(0, 183, 255);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(56, 56, 56);
+    border-radius: 30px;
+    border: 0 solid rgb(0, 183, 255);
+  }

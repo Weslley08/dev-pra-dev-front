@@ -1,0 +1,161 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 1rem auto 0 auto;
+  background-color: rgb(56, 56, 56);
+  
+}
+
+.footer {
+  width: 90%;
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  word-wrap: break-word;
+  margin-top: 3%;
+}
+
+.footer > p {
+  color: #bbcad8 !important;
+  padding: 0;
+  margin: 0;
+}
+
+.botao {
+  width: 45%;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-left:0.5%;
+  padding: 2%;
+}
+
+
+/* AREA DE REGISTRAR-SE*/
+.register-container {
+  width: 60%;
+  margin-top: 2%;
+  border-right: 1px solid rgb(255, 255, 255);
+  margin: 5%;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.register-container h1 {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.box1 {
+  width: 100%;
+}
+
+.box2 {
+  width: 100%;
+}
+
+.box3 {
+  width: 100%;
+}
+
+.box4 {
+  width: 100%;
+}
+
+/* box 1 */
+.nome {
+  width: 45%;
+  margin-left: 1%;
+}
+
+.sobrenome {
+  width: 45%;
+  margin-left: 2%;
+}
+
+/* box 2 */
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.dataNasc {
+  width: 45%;
+  margin-left: 1%;
+}
+
+.sexo {
+  width: 45%;
+  margin-left: 2%;
+}
+
+/* box 3 */
+.telefone {
+  width: 45%;
+  margin-left: 1%;
+}
+
+.altTelefone {
+  width: 45%;
+  margin-left: 2%;
+}
+
+/* box 4 */
+.emailRegistro {
+  width: 45%;
+  margin-left: 1%;
+}
+
+.senhaRegistro {
+  width: 45%;
+  margin-left: 2%;
+}
+/* FIM AREA DE REGISTRO*/
+
+/* AREA DE LOGIN*/
+.login-container {
+  width: 30%;
+  margin-top: 5%;
+}
+
+.login-container h1 {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.emailLogin {
+  width: 100%;
+  margin-left: -5%;
+}
+
+.senhaLogin {
+  width: 100%;
+  margin-left: -5%;
+}
+
+.resetPW {
+  float: right;
+  font-size: x-small;
+  display: flex;
+  color: rgb(133, 231, 218);
+  font-weight: 400;
+  text-decoration: none;
+  flex-direction: column;
+  margin-right: 5%;
+  margin-left: 15%;
+}
+
+mat-form-field {
+  margin-left: 15%;
+  width: 70%;
+}

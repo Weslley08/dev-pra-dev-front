@@ -1,0 +1,71 @@
+<mat-drawer-container class="container" autosize>
+
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <mat-nav-list>
+            <a class="link" mat-list-item routerLink="">
+                <i class="material-icons icones">home</i>
+                Home
+            </a>
+
+            <a class="link" mat-list-item routerLink="criarPost">
+                <i class="material-icons icones">add</i>
+                Criar post
+            </a>
+
+            <a class="link" mat-list-item routerLink="loginRegistro">
+                <i class="material-icons icones">login</i>
+                Login/Registro
+            </a>
+
+            <a class="link" mat-list-item>
+                <i class="material-icons icones">share</i>
+                Redes Sociais
+                <mat-select>
+                    <mat-option>
+                        <a href="https://api.whatsapp.com/send?phone=5581995685190" mat-list-item>
+                            <i class="material-icons">whatsapp</i>
+                        </a>
+                    </mat-option>
+
+                    <mat-option>
+                        <a href="https://t.me/weslley_jonathan" mat-list-item>
+                            <i class="material-icons">telegram</i>
+                        </a>
+                    </mat-option>
+
+                    <mat-option>
+                        <a href="" mat-list-item>
+                            <i class="material-icons">discord</i>
+                        </a>
+                    </mat-option>
+
+                </mat-select>
+            </a>
+
+            <a class="link" mat-list-item routerLink="precos">
+                <i class="material-icons icones">sell</i>
+                Preços
+            </a>
+
+            <a class="link" mat-list-item routerLink="sobre">
+                <i class="material-icons icones">info</i>
+                Sobre
+            </a>
+
+        </mat-nav-list>
+
+        <div class="footer">
+            <p>© 2021 DEV PRA DEV</p>
+        </div>
+
+
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon class="teste">apps</mat-icon>
+        </button>
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-drawer-container>
