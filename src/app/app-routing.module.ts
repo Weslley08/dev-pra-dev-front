@@ -1,3 +1,4 @@
+import { DashboardComponent } from './components/pessoa/dashboard/dashboard.component';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -32,6 +33,11 @@ const routes: Routes = [
   {
     path: 'loginRegistro',
     component: LoginComponent
+  },
+
+  {
+    path: 'dashboard',
+    component: DashboardComponent
   },
 
   {

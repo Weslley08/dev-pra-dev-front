@@ -33,6 +33,8 @@ import { AtualizarPostComponent } from './components/post/atualizar-post/atualiz
 import { AtualizarPessoaComponent } from './components/pessoa/atualizar-pessoa/atualizar-pessoa.component';
 import { DeletarPostComponent } from './components/post/deletar-post/deletar-post.component';
 import { DeletarPessoaComponent } from './components/pessoa/deletar-pessoa/deletar-pessoa.component';
+import { DashboardComponent } from './components/pessoa/dashboard/dashboard.component';
+import { ErroComponent } from './components/template/erro/erro.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { DeletarPessoaComponent } from './components/pessoa/deletar-pessoa/delet
     AtualizarPessoaComponent,
     DeletarPostComponent,
     DeletarPessoaComponent,
+    DashboardComponent,
+    ErroComponent,
   ],
 
   imports: [

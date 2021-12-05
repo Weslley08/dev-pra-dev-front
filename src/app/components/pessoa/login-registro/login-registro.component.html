@@ -9,29 +9,15 @@
       <div class="box1">
         <mat-form-field class="nome" appearance="fill">
           <mat-label>Nome</mat-label>
-          <input
-            placeholder="João Pedro"
-            [(ngModel)]="pessoa.nome"
-            [formControl]="nome"
-            name="nome"
-            maxlength="20"
-            matInput
-            required
-          />
+          <input placeholder="João Pedro" [(ngModel)]="pessoa.nome" [formControl]="nome" name="nome" maxlength="20"
+            matInput required />
           <mat-error *ngIf="nome.invalid">{{ erroValidNome() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field class="sobrenome" appearance="fill">
           <mat-label>Sobrenome</mat-label>
-          <input
-            placeholder="Lemos"
-            matInput
-            [(ngModel)]="pessoa.sobrenome"
-            [formControl]="sobrenome"
-            name="sobrenome"
-            maxlength="20"
-            required
-          />
+          <input placeholder="Lemos" matInput [(ngModel)]="pessoa.sobrenome" [formControl]="sobrenome" name="sobrenome"
+            maxlength="20" required />
           <mat-error *ngIf="sobrenome.invalid">{{ erroValidSobrenome() }}</mat-error>
         </mat-form-field>
       </div>
@@ -39,26 +25,13 @@
       <div class="box2">
         <mat-form-field class="dataNasc" appearance="fill">
           <mat-label>Data de nascimento</mat-label>
-          <input
-            matInput
-            [matDatepicker]="dt"
-            [formControl]="data"
-            [(ngModel)]="pessoa.dataDeNascimento"
-            name="dataDeNascimento"
-          />
-          <mat-datepicker-toggle
-            matSuffix
-            [for]="dt"
-          ></mat-datepicker-toggle>
+          <input matInput [matDatepicker]="dt" [(ngModel)]="dataFormatada"
+            name="dataDeNascimento" required/>
+          <mat-datepicker-toggle matSuffix [for]="dt"></mat-datepicker-toggle>
           <mat-datepicker #dt></mat-datepicker>
         </mat-form-field>
 
-        <mat-radio-group
-          class="sexo"
-          appearance="fill"
-          [(ngModel)]="pessoa.sexo"
-          name="sexo"
-        >
+        <mat-radio-group class="sexo" appearance="fill" [(ngModel)]="pessoa.sexo" name="sexo">
           <mat-radio-button value="MASCULINO">Masculino</mat-radio-button>
           <mat-radio-button value="FEMININO">Feminino</mat-radio-button>
           <mat-radio-button value="OUTROS">Outros</mat-radio-button>
@@ -67,61 +40,26 @@
 
       <div class="box3">
         <mat-form-field class="telefone" appearance="fill">
-          <mat-label>Telefone</mat-label>
-          <input
-            placeholder="81 9 9999 9999"
-            matInput
-            [(ngModel)]="pessoa.numero"
-            [formControl]="numero"
-            name="numero"
-            maxlength="15"
-            required
-          />
-          <mat-error *ngIf="numero.invalid">{{ erroValidNumero() }}</mat-error>
-        </mat-form-field>
-
-        <mat-form-field class="altTelefone" appearance="fill">
-          <mat-label>Telefone Alternativo</mat-label>
-          <input
-            placeholder="81 9 9999 9999"
-            matInput
-            [(ngModel)]="pessoa.numero_alternativo"
-            [formControl]="numero_alternativo"
-            name="numero_alternativo"
-            maxlength="15"
-          />
-          <mat-error *ngIf="numero_alternativo.invalid">{{ erroValidNumero() }}</mat-error>
+          <mat-label>Celular</mat-label>
+          <input placeholder="81 9 9999 9999" matInput [(ngModel)]="pessoa.telefone" [formControl]="telefone" name="telefone"
+            maxlength="15" required />
+          <mat-error *ngIf="telefone.invalid">{{ erroValidTelefone() }}</mat-error>
         </mat-form-field>
       </div>
 
       <div class="box4">
         <mat-form-field class="emailRegistro" appearance="fill">
           <mat-label>Email</mat-label>
-          <input
-            placeholder="examplemail@dominio.com"
-            matInput
-            [(ngModel)]="pessoa.email"
-            [formControl]="email"
-            name="email"
-            required
-          />
+          <input placeholder="examplemail@dominio.com" matInput [(ngModel)]="pessoa.email" [formControl]="email"
+            name="email" required />
           <mat-error *ngIf="email.invalid">{{ erroValidEmail() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field class="senhaRegistro" appearance="fill">
           <mat-label>Senha</mat-label>
-          <input
-            placeholder="Digite sua senha"
-            matInput
-            [type]="hide ? 'password' : 'text'"
-          />
-          <button
-            mat-icon-button
-            matSuffix
-            (click)="hide = !hide"
-            [attr.aria-label]="'Mostrar senha'"
-            [attr.aria-pressed]="hide"
-          >
+          <input placeholder="Digite sua senha" matInput [type]="hide ? 'password' : 'text'" />
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Mostrar senha'"
+            [attr.aria-pressed]="hide">
             <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
           </button>
         </mat-form-field>
@@ -155,23 +93,14 @@
 
     <mat-form-field class="senhaLogin" appearance="fill">
       <mat-label>Senha</mat-label>
-      <input
-        placeholder="Digite sua senha"
-        matInput
-        [type]="hide ? 'password' : 'text'"
-      />
-      <button
-        mat-icon-button
-        matSuffix
-        (click)="hide = !hide"
-        [attr.aria-label]="'Mostrar senha'"
-        [attr.aria-pressed]="hide"
-      >
+      <input placeholder="Digite sua senha" matInput [type]="hide ? 'password' : 'text'" />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Mostrar senha'"
+        [attr.aria-pressed]="hide">
         <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
       </button>
     </mat-form-field>
 
-    <button class="botao" mat-raised-button color="accent">
+    <button class="botao" mat-raised-button color="accent" (click)="login()">
       Iniciar sessão
     </button>
 
