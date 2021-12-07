@@ -1,5 +1,5 @@
 import { DashboardComponent } from './components/pessoa/dashboard/dashboard.component';
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { CriarPostComponent } from './components/post/criar-post/criar-post.component';
