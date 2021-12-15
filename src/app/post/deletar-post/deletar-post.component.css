@@ -5,7 +5,7 @@
     margin: 1rem auto 0 auto;
 }
 
-.container > table {
+.container > div {
     flex-direction: column;
     display: flex;
 }

@@ -1,64 +1,60 @@
-<mat-drawer-container class="container" autosize>
+<mat-drawer-container class="containerNav" autosize>
 
     <mat-drawer #drawer class="sidenav" mode="side">
         <mat-nav-list>
             <a class="link" mat-list-item routerLink="">
-                <i class="material-icons icones">home</i>
+                <em class="material-icons icones">home</em>
                 Home
             </a>
 
             <a class="link" mat-list-item routerLink="criarPost">
-                <i class="material-icons icones">add</i>
+                <em class="material-icons icones">add</em>
                 Criar post
             </a>
 
             <a class="link" mat-list-item routerLink="loginRegistro">
-                <i class="material-icons icones">login</i>
+                <em class="material-icons icones">login</em>
                 Login/Registro
             </a>
 
             <a class="link" mat-list-item>
-                <i class="material-icons icones">share</i>
+                <em class="material-icons icones">share</em>
                 Redes Sociais
                 <mat-select>
                     <mat-option>
                         <a href="https://api.whatsapp.com/send?phone=5581995685190" mat-list-item>
-                            <i class="material-icons">whatsapp</i>
+                            <em class="material-icons">whatsapp</em>
                         </a>
                     </mat-option>
 
                     <mat-option>
                         <a href="https://t.me/weslley_jonathan" mat-list-item>
-                            <i class="material-icons">telegram</i>
+                            <em class="material-icons">telegram</em>
                         </a>
                     </mat-option>
 
                     <mat-option>
                         <a href="" mat-list-item>
-                            <i class="material-icons">discord</i>
+                            <em class="material-icons">discord</em>
                         </a>
                     </mat-option>
-
                 </mat-select>
             </a>
 
             <a class="link" mat-list-item routerLink="precos">
-                <i class="material-icons icones">sell</i>
+                <em class="material-icons icones">sell</em>
                 Preços
             </a>
 
             <a class="link" mat-list-item routerLink="sobre">
-                <i class="material-icons icones">info</i>
+                <em class="material-icons icones">info</em>
                 Sobre
             </a>
-
         </mat-nav-list>
 
-        <div class="footer">
+        <footer class="footer">
             <p>© 2021 DEV PRA DEV</p>
-        </div>
-
-
+        </footer>
     </mat-drawer>
 
     <div class="sidenav-content">

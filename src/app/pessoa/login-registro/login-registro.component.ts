@@ -1,12 +1,12 @@
 import { Router } from '@angular/router';
-import { PessoaService } from './../../../service/pessoa.service';
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Pessoa } from 'src/app/models/Pessoa';
+import { Pessoa } from 'src/app/pessoa/Pessoa';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import * as _moment from 'moment';
 import { default as _rollupMoment } from 'moment';
+import { PessoaService } from '../pessoa.service';
 
 const moment = _rollupMoment || _moment;
 export const MY_FORMATS = {

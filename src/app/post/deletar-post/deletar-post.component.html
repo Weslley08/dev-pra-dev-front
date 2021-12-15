@@ -1,27 +1,21 @@
 <form class="mat-elevation-z8" class="container">
   <p class="titulo-page">Deletando postagem</p>
 
-  <table cellspacing="0">
-    <td>
+  <div>
       <mat-form-field id="titulo" appearance="fill">
         <mat-label>Titulo</mat-label>
-        <input [(ngModel)]="post.titulo" name="titulo" matInput disabled/>
+        <input [(ngModel)]="post.titulo" name="titulo" matInput disabled />
       </mat-form-field>
-    </td>
 
-    <td>
       <mat-form-field id="autor" appearance="fill">
         <mat-label>Autor</mat-label>
-        <input [(ngModel)]="post.autor" name="autor" matInput disabled/>
+        <input [(ngModel)]="post.autor" name="autor" matInput disabled />
       </mat-form-field>
-    </td>
 
-    <td>
       <mat-form-field id="texto" appearance="fill">
         <mat-label>Texto</mat-label>
         <textarea rows="10" matInput [(ngModel)]="post.texto" name="texto" disabled></textarea>
       </mat-form-field>
-    </td>
 
     <div class="botao">
       <button mat-stroked-button color="warn" (click)="cancelar()">
@@ -32,5 +26,6 @@
         Deletar
       </button>
     </div>
-  </table>
+  </div>
+
 </form>

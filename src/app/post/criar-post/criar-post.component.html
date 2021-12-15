@@ -1,0 +1,34 @@
+<form class="mat-elevation-z8" class="container">
+  <p class="titulo-page">Fazer postagem</p>
+
+  <div>
+    <mat-form-field id="titulo" appearance="fill">
+      <mat-label>Titulo</mat-label>
+      <input [(ngModel)]="post.titulo" [formControl]="titulo" name="titulo" maxlength="100" matInput required />
+      <mat-error *ngIf="titulo.invalid">{{ erroValidTitulo() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field id="autor" appearance="fill">
+      <mat-label>Autor</mat-label>
+      <input [(ngModel)]="post.autor" [formControl]="autor" name="autor" matInput maxlength="32" required />
+      <mat-error *ngIf="autor.invalid">{{ erroValidAutor() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field id="texto" appearance="fill">
+      <mat-label>Texto</mat-label>
+      <textarea rows="10" matInput [(ngModel)]="post.texto" [formControl]="texto" name="texto" required></textarea>
+      <mat-error *ngIf="texto.invalid">{{ erroValidTexto() }}</mat-error>
+    </mat-form-field>
+
+    <div class="botao">
+      <button mat-stroked-button color="warn" (click)="cancelar()">
+        Cancelar
+      </button>
+      <button mat-stroked-button color="accent" (click)="create()"
+        [disabled]="erroValidTitulo() || erroValidAutor() || erroValidTexto()">
+        Publicar
+      </button>
+    </div>
+  </div>
+  
+</form>

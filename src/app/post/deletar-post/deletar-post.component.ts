@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Post } from 'src/app/models/Post';
-import { PostService } from 'src/app/service/post.service'
+import { Post } from '../Post';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-deletar-post',
