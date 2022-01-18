@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from '../app-routing.module';
+import { TemplateRoutingModule } from './template-routing.module';
 import { NavComponent } from './nav/nav.component';
 import { PrecosComponent } from './precos/precos.component';
 import { SobreComponent } from './sobre/sobre.component';
@@ -40,9 +40,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     ErroComponent
   ],
   imports: [
-    AppRoutingModule,
     CommonModule,
     HttpClientModule,
+    
+    TemplateRoutingModule,
 
     ReactiveFormsModule,
     MatFormFieldModule,

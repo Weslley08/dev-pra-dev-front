@@ -25,6 +25,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PostRoutingModule } from './post-routing.module';
 
 @NgModule({
   declarations: [
@@ -40,10 +41,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DeletarPostComponent
   ],
   imports: [
-    AppRoutingModule,
     CommonModule,
-
     FormsModule,
+    
+    PostRoutingModule,
 
     ReactiveFormsModule,
     MatFormFieldModule,

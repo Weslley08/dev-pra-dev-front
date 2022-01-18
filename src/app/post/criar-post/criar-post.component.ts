@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Post } from '../Post';
 import { PostService } from '../post.service';
@@ -17,9 +17,11 @@ export class CriarPostComponent {
     autor: ''
   }
 
-  titulo = new FormControl('', [Validators.minLength(20)]);
-  texto = new FormControl('', [Validators.minLength(30)]);
-  autor = new FormControl('', [Validators.minLength(3)]);
+  postForm = new FormGroup({
+    titulo: new FormControl('', [Validators.minLength(20)]),
+    texto: new FormControl('', [Validators.minLength(30)]),
+    autor: new FormControl('', [Validators.minLength(3)])
+  })
 
   constructor(private service: PostService, private router: Router) { }
 
@@ -39,21 +41,21 @@ export class CriarPostComponent {
 
 
   erroValidTitulo() {
-    if (this.titulo.invalid) {
+    if (this.postForm.get('titulo')?.invalid) {
       return 'O titulo deve conter no minimo 20 caracteres';
     }
     return false;
   }
 
   erroValidTexto() {
-    if (this.texto.invalid) {
+    if (this.postForm.get('texto')?.invalid) {
       return 'O texto deve conter no minimo 30 caracteres';
     }
     return false;
   }
 
   erroValidAutor() {
-    if (this.autor.invalid) {
+    if (this.postForm.get('autor')?.invalid) {
       return 'O autor deve conter entre 3 e 32 caracteres';
     }
     return false;

@@ -1,23 +1,23 @@
-<form class="mat-elevation-z8" class="container">
+<form [formGroup]="postForm" class="mat-elevation-z8 container">
   <p class="titulo-page">Fazer postagem</p>
 
   <div>
     <mat-form-field id="titulo" appearance="fill">
       <mat-label>Titulo</mat-label>
-      <input [(ngModel)]="post.titulo" [formControl]="titulo" name="titulo" maxlength="100" matInput required />
-      <mat-error *ngIf="titulo.invalid">{{ erroValidTitulo() }}</mat-error>
+      <input [(ngModel)]="post.titulo" formControlName="titulo" maxlength="100" matInput required />
+      <mat-error *ngIf="postForm.invalid">{{ erroValidTitulo() }}</mat-error>
     </mat-form-field>
 
     <mat-form-field id="autor" appearance="fill">
       <mat-label>Autor</mat-label>
-      <input [(ngModel)]="post.autor" [formControl]="autor" name="autor" matInput maxlength="32" required />
-      <mat-error *ngIf="autor.invalid">{{ erroValidAutor() }}</mat-error>
+      <input [(ngModel)]="post.autor" formControlName="autor" matInput maxlength="32" required />
+      <mat-error *ngIf="postForm.invalid">{{ erroValidAutor() }}</mat-error>
     </mat-form-field>
 
     <mat-form-field id="texto" appearance="fill">
       <mat-label>Texto</mat-label>
-      <textarea rows="10" matInput [(ngModel)]="post.texto" [formControl]="texto" name="texto" required></textarea>
-      <mat-error *ngIf="texto.invalid">{{ erroValidTexto() }}</mat-error>
+      <textarea rows="10" matInput [(ngModel)]="post.texto" formControlName="texto" required></textarea>
+      <mat-error *ngIf="postForm.invalid">{{ erroValidTexto() }}</mat-error>
     </mat-form-field>
 
     <div class="botao">
@@ -25,7 +25,7 @@
         Cancelar
       </button>
       <button mat-stroked-button color="accent" (click)="create()"
-        [disabled]="erroValidTitulo() || erroValidAutor() || erroValidTexto()">
+        [disabled]="!postForm.valid">
         Publicar
       </button>
     </div>

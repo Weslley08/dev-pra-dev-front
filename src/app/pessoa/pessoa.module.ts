@@ -25,6 +25,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PessoaRoutingModule } from './pessoa-routing.module';
 
 @NgModule({
   declarations: [
@@ -41,10 +42,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule,
-
     FormsModule,
-
+    
+    PessoaRoutingModule,
+    
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,

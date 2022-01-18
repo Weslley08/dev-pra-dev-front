@@ -1,5 +1,5 @@
+import { Post } from './../Post';
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../Post';
 import { PostService } from '../post.service';
 
 @Component({
@@ -16,15 +16,11 @@ export class HomeComponent implements OnInit {
     this.findAll();
   }
 
-  addLike = 0;
-  adicionarLike() {
-    this.addLike = this.addLike + 1;
-    console.log(this.addLike)
-  }
-
   posts: Post[] = [];
+  post: Post = { like: 0 }
 
-  displayedColumns: string[] = ['id', 'titulo', 'texto', 'autor', 'data'];
+
+  displayedColumns: string[] = ['id', 'titulo', 'texto', 'autor', 'data', 'like'];
   dataSource = this.posts;
 
   findAll(): void {

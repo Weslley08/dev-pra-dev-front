@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:8080/api/blog'
+  baseUrl: 'https://dev-pra-dev.herokuapp.com/api/blog'
   
-  //'https://dev-pra-dev.herokuapp.com/api/blog'
+  //'http://localhost:8080/api/blog'
 };
 
 /*

@@ -4,8 +4,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { Post } from './Post';
 
-// import { environmentProd } from 'src/environments/environment.prod';
-import { environment } from 'src/environments/environment';
+import { environmentProd } from 'src/environments/environment.prod';
+// import { environment } from 'src/environments/environment';
 
 @Injectable({
 	providedIn: 'root'
@@ -14,10 +14,10 @@ import { environment } from 'src/environments/environment';
 export class PostService {
 
 	// Localmente
-	baseUrl: String = environment.baseUrl
+	// baseUrl: String = environment.baseUrl
 
 	// Em produção
-	// baseUrl: String = environmentProd.baseUrl;
+	baseUrl: String = environmentProd.baseUrl;
 
 	constructor(private http: HttpClient, private snack: MatSnackBar) { }
 

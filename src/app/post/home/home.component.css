@@ -1,9 +1,19 @@
-.mat-card {
+.card {
   font-family: Google Sans;
   width: 50%;
   height: 50%;
   margin: 1rem auto 0 auto;
   word-wrap: break-word;
+  background-color: rgb(66, 66, 66);
+}
+
+.title {
+  font-size: 20px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 10px;
 }
 
 .image {
@@ -11,16 +21,39 @@
   width: 45px;
 }
 
-.titulo {
-  white-space: pre-line;
-}
-
 .texto {
   white-space: pre-line;
 }
 
+.col-data {
+  padding-right: 1%;
+  margin-top: 2%;
+}
+
 .data {
-  margin-right: 3%;
   color: rgba(255, 255, 255, 0.7);
   float: right;
+  margin: 0;
 }
+
+ul {
+  background-color: rgb(66, 66, 66);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Botões*/
+button {
+  background-color: rgb(66, 66, 66);
+  border: none;
+
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+

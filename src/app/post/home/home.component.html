@@ -1,58 +1,60 @@
-<mat-card class="mat-elevation-z8" *ngFor="let post of posts">
-  <mat-card-header>
-    <div mat-card-avatar>
-      <img
-        class="image"
-        src="https://cdn.discordapp.com/attachments/717843778710536206/912844025785118790/my-pic.png"
-        alt="Logo do site"
-      />
+<div class="card" *ngFor="let post of posts">
+  <header>
+      <img class="image" src="https://cdn.discordapp.com/attachments/717843778710536206/912844025785118790/my-pic.png"
+        alt="Logo do usuario" />
+
+      <h6 class="title"> {{ post.autor }} </h6>
+      <p class="subtitle"> CEO, Founder </p>
+  </header>
+
+  <title>
+    <p class="texto"> {{ post.titulo }} </p>
+  </title>
+
+  <section>
+    <p class="texto"> {{ post.texto }} </p>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-7">
+        <button class="botao-like" >
+          <!-- <input [(ngModel)]="post.like" type=""> -->
+          <img src="./../../../assets/icons/favorite_border_black_24dp.svg" alt="favoritar">
+        </button>
+
+        <button class="botao-comentar">
+          <img src="./../../../assets/icons/comment_black_24dp.svg" alt="comentar">
+        </button>
+
+        <button class="botao-mais" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <img src="./../../../assets/icons/more_vert_black_24dp.svg" alt="mais">
+        </button>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li>
+            <a routerLink="atualizarPost/{{ post.idPost }}">
+              <img src="./../../../assets/icons/edit_black_24dp.svg" alt="editar">
+              <span>Editar</span>
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="deletarPost/{{ post.idPost }}">
+              <img src="./../../../assets/icons/delete_black_24dp.svg" alt="deletar">
+              <span>Deletar</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-5 col-data">
+        <footer>
+          <p class="data"> {{ post.data }} </p>
+        </footer>
+      </div>
+
     </div>
-    <mat-card-title>{{ post.autor }}</mat-card-title>
-    <mat-card-subtitle>CEO, Founder</mat-card-subtitle>
-  </mat-card-header>
-
-  <img mat-card-image src="" alt="" />
-  <mat-card-title>
-    <p class="titulo">{{ post.titulo }}</p>
-  </mat-card-title>
-
-  <mat-card-content>
-    <p class="texto">{{ post.texto }}</p>
-  </mat-card-content>
-
-  <mat-card-actions>
-    <mat-card-footer>
-      <p class="data">{{ post.data }}</p>
-    </mat-card-footer>
-
-    <button mat-button (click)="adicionarLike()">
-      <em class="material-icons">favorite_border</em>
-    </button>
-
-    <button mat-button>
-      <em class="material-icons">message</em>
-    </button>
-
-    <button mat-button>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <a routerLink="atualizarPost/{{ post.idPost }}">
-            <mat-icon>editar</mat-icon>
-            <span>Editar</span>
-          </a>
-        </button>
-
-        <button mat-menu-item>
-          <a routerLink="deletarPost/{{ post.idPost }}">
-            <mat-icon>delete</mat-icon>
-            <span>Deletar</span>
-          </a>
-        </button>
-      </mat-menu>
-    </button>
-  </mat-card-actions>
-</mat-card>
+  </div>
+</div>
